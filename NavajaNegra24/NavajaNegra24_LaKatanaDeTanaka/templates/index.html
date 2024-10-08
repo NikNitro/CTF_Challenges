@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Katana Mortal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #5bc0de;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        a:hover {
+            background-color: #31b0d5;
+        }
+        .logout {
+            background-color: #d9534f;
+        }
+        .logout:hover {
+            background-color: #c9302c;
+        }
+        .katana {
+            background-color: #5cb85c;
+        }
+        .katana:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido, Shinobi</h1>
+    <p>Solo los dignos podrán obtener la <strong>Katana Mortal</strong>.</p>
+
+    <div>
+        {% if logged_in %}
+            <a href="/logout" class="logout">Logout</a>
+            <a href="/obtener_katana" class="katana">Obtener la Katana</a>
+        {% else %}
+            <a href="/login">Login</a>
+            <p>Inicia sesión para reclamar tu derecho a la Katana.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
