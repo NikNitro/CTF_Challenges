@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener la Katana Mortal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .message {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+        }
+        .back-link {
+            margin-top: 20px;
+            display: inline-block;
+        }
+        a {
+            color: #5bc0de;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Obtener la Katana Mortal</h1>
+    <div class="message">
+        {% if katana_granted %}
+            <p>¡Felicidades, {{ user }}! Has demostrado ser digno de empuñar la <strong>Katana Mortal</strong>.</p>
+            <p>La katana mortal está en tus manos.</p>
+            <p> Flag: Tanaka_loser</p>
+        {% else %}
+            <p>Lo siento, {{ user }}, pero no eres digno de la <strong>Katana Mortal</strong>.</p>
+            <p>Solo el guerrero Tanaka puede obtenerla.</p>
+        {% endif %}
+    </div>
+
+    <div class="back-link">
+        <a href="/">← Volver al inicio</a>
+    </div>
+</body>
+</html>
